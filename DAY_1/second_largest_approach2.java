@@ -5,7 +5,7 @@ import java.util.*;
 This is the O(nlogn) approach for finding second largest element in the array.
 */
 
-public class largest_element_approach2 {
+public class second_largest_approach2 {
 
     public static void main(String[] args) {
         int arr[]={1,34,56,7,8,99,45};
