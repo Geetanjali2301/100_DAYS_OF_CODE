@@ -1,6 +1,7 @@
 package DAY_3;
 /*
 # Leetcode 283
+TC => O(n)
 */
 
 public class move_zeroes {
