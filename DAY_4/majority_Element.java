@@ -9,7 +9,6 @@ public class majority_Element {
         int arr[]={3,3,6,7,3,3,3,3};
         Arrays.sort(arr);
         System.out.println(arr[arr.length/2]);
-
     }
     
 }
