@@ -1,4 +1,7 @@
 package DAY_17;
+/*
+# Leetcode 724
+*/
 
 public class pivotIndex {
 
