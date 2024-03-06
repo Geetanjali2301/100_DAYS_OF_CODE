@@ -1,38 +1,39 @@
 package DAY_17;
+/*
+# Leetcode 58 
+*/
 
-
-import java.util.*;
 public class duplicateLetters {
 
-    public static void main(String[] args) {
-        String s="cbacdcbc";
-        char arr[]=s.toCharArray();
-        String ans="";
-        
-        Arrays.sort(arr);
+        public static int lengthOfLastWord(String s) {
 
-        for(int i=0;i<arr.length;i++)
-        {
-            if(i==0 && arr[i+1]!=arr[i])
+            int count=0;
+            for(int i=s.length()-1;i>=0;i--)
             {
-                ans+=arr[i];
-            }
-            else
-            {
-                char temp=arr[i-1];
-                if(arr[i]!=temp)
+                if(s.charAt(i)==' ')
                 {
-                    ans+=arr[i];
+                    if(count>0)
+                    {
+                        break;
+                    }
                 }
-
+                else
+                {
+                    count++;
+                }
             }
+    
+            return count;      
+            
+        }
 
-           
+        public static void main(String[] args) {
+            String s="Hello World";
+            int ans=lengthOfLastWord(s);
+            System.out.println(ans);
 
         }
 
-        System.out.println(ans);
-
-    }
-    
 }
+    
+
