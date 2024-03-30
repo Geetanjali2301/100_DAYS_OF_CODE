@@ -45,8 +45,6 @@ public class permutations {
         List<List<Integer>> ans=new ArrayList<>();
         List<List<Integer>> h=permute(ans,0,nums);
         System.out.println(ans);
-
-
     }
     
 }
