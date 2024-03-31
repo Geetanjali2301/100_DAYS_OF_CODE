@@ -1,0 +1,48 @@
+package DAY_42;
+/*
+
+*/
+
+public class conflictEvent {
+
+    public static boolean haveConflict(String[] event1, String[] event2) {
+
+       String x[] = new String[2];
+       String y[] = new String[2];
+
+       String m[] = new String[2];
+       String n[] = new String[2];
+       int a, b, c, d;
+
+       x=event1[0].split(":");
+       y=event1[1].split(":");
+
+       a=Integer.parseInt(x[0])*60 + Integer.parseInt(x[1]);
+       b=Integer.parseInt(y[0])*60 + Integer.parseInt(y[1]);
+
+       m=event2[0].split(":");
+       n=event2[1].split(":");
+
+       c=Integer.parseInt(m[0])*60 + Integer.parseInt(m[1]);
+       d=Integer.parseInt(n[0])*60 + Integer.parseInt(n[1]);
+
+       if(((a>=c && a<=d) || (b>=c && b<=d)) ||
+         ((c>=a && c<=b) || (d>=a && d<=b))
+       )
+       {
+           return true;
+       }
+
+       return false;
+       
+   }
+
+   public static void main(String[] args) {
+    String event1[] = {"01:15","02:00"};
+    String event2[] = {"02:00","03:00"};
+
+    boolean ans=haveConflict(event1, event2);
+    System.out.println(ans);
+   }
+    
+}
